@@ -295,7 +295,7 @@ class BotGUI:
     def setup_gui(self):
         """Configurar la interfaz gráfica"""
         self.root.title("Bot para Publicar Reels - MeVoyADarUnLujoDiario")
-        self.root.geometry("600x700")
+        self.root.geometry("650x750")
         self.root.resizable(True, True)
         
         # Frame principal
@@ -325,6 +325,10 @@ class BotGUI:
         self.insta_pass = tk.StringVar(value=self.bot.config["instagram"]["password"])
         ttk.Entry(insta_frame, textvariable=self.insta_pass, show="*").grid(row=1, column=1, sticky=(tk.W, tk.E), pady=2)
         
+        ttk.Label(insta_frame, text="URL del Perfil:").grid(row=2, column=0, sticky=tk.W, pady=2)
+        self.insta_url = tk.StringVar(value=self.bot.config["instagram"]["profile_url"])
+        ttk.Entry(insta_frame, textvariable=self.insta_url).grid(row=2, column=1, sticky=(tk.W, tk.E), pady=2)
+        
         # Configuración de YouTube
         yt_frame = ttk.LabelFrame(main_frame, text="Configuración YouTube", padding="10")
         yt_frame.grid(row=2, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=(0, 10))
@@ -337,6 +341,10 @@ class BotGUI:
         ttk.Label(yt_frame, text="Contraseña:").grid(row=1, column=0, sticky=tk.W, pady=2)
         self.yt_pass = tk.StringVar(value=self.bot.config["youtube"]["password"])
         ttk.Entry(yt_frame, textvariable=self.yt_pass, show="*").grid(row=1, column=1, sticky=(tk.W, tk.E), pady=2)
+        
+        ttk.Label(yt_frame, text="URL del Canal:").grid(row=2, column=0, sticky=tk.W, pady=2)
+        self.yt_url = tk.StringVar(value=self.bot.config["youtube"]["channel_url"])
+        ttk.Entry(yt_frame, textvariable=self.yt_url).grid(row=2, column=1, sticky=(tk.W, tk.E), pady=2)
         
         # Configuración del navegador
         browser_frame = ttk.LabelFrame(main_frame, text="Configuración de Chrome", padding="10")
@@ -449,8 +457,10 @@ class BotGUI:
         try:
             self.bot.config["instagram"]["username"] = self.insta_user.get()
             self.bot.config["instagram"]["password"] = self.insta_pass.get()
+            self.bot.config["instagram"]["profile_url"] = self.insta_url.get()
             self.bot.config["youtube"]["email"] = self.yt_email.get()
             self.bot.config["youtube"]["password"] = self.yt_pass.get()
+            self.bot.config["youtube"]["channel_url"] = self.yt_url.get()
             self.bot.config["chrome_path"] = self.chrome_path.get()
             self.bot.config["video_path"] = self.default_video_path.get()
             self.bot.config["headless"] = self.headless_var.get()
@@ -509,6 +519,7 @@ class BotGUI:
         """Actualizar el widget de texto (debe ejecutarse en el hilo principal)"""
         self.log_text.insert(tk.END, message)
         self.log_text.see(tk.END)
+        print(message.strip()) # También imprimir en consola
         
     def run(self):
         """Ejecutar la aplicación"""
