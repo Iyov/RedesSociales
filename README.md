@@ -50,5 +50,5 @@ El bot funciona en modo incógnito para mayor privacidad
 Los videos deben cumplir con los requisitos de cada plataforma
 La primera ejecución puede ser más lenta mientras se cargan las dependencias
 
-### Desarrollado para Iyov
+### Desarrollado por Francisco Barrientos (https://github.com/Iyov)
 
