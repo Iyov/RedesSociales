@@ -2,7 +2,6 @@
 .env
 .env.local
 .env.production
-social_media_config.json
 
 # Python
 __pycache__/
@@ -48,3 +47,4 @@ Thumbs.db
 # Selenium
 webdriver/
 geckodriver.log
+social_media_config.json
