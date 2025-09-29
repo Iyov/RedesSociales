@@ -2,12 +2,12 @@
 Bot automatizado para publicar videos en Instagram Reels y YouTube Shorts.
 
 ## 🚀 Características
-📱 Instagram Reels: Publicación automática en tu perfil
-🎬 YouTube Shorts: Subida automática a tu canal
-🔒 Chrome Incógnito: Navegación privada y segura
-⚙️ Configuración persistente: Guarda tus credenciales
-🎯 Video por defecto: Configura un video predeterminado
-📊 Logs en tiempo real: Seguimiento del proceso
+- 📱 Instagram Reels: Publicación automática en tu perfil
+- 🎬 YouTube Shorts: Subida automática a tu canal
+- 🔒 Chrome Incógnito: Navegación privada y segura
+- ⚙️ Configuración persistente: Guarda tus credenciales
+- 🎯 Video por defecto: Configura un video predeterminado
+- 📊 Logs en tiempo real: Seguimiento del proceso
 
 ## 📦 Instalación
 Instalar dependencias:
