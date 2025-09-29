@@ -1,0 +1,15 @@
+{
+    "instagram": {
+        "username": "tu_usuario_instagram",
+        "password": "tu_contraseña_instagram",
+        "profile_url": "https://www.instagram.com/tu_usuario/"
+    },
+    "youtube": {
+        "email": "tu_email_youtube@gmail.com",
+        "password": "tu_contraseña_youtube",
+        "channel_url": "https://www.youtube.com/@tu_usuario"
+    },
+    "chrome_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "video_path": "C:\\Users\\TuUsuario\\Videos\\mi_reel.mp4",
+    "headless": false
+}
