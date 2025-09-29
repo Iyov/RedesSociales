@@ -15,12 +15,11 @@ Instalar dependencias:
 bash
 pip install selenium
 ```
-
 Ejecutar el bot:
-
+```
 bash
 python bot_social_media.py
-
+```
 ## ⚙️ Configuración
 Edita social_media_config.json o usa la interfaz gráfica:
 ```
